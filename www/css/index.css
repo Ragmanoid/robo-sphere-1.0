@@ -175,6 +175,13 @@ input {
 	width: 50%;
 }
 
+#gamePage .stop-game {
+	margin: 50px auto;
+	background-color: #b98627;
+	color: white;
+	width: 50%;
+}
+
 #gamePage .disconnect {
 	margin: 50px auto;
 	background-color: #b93127;

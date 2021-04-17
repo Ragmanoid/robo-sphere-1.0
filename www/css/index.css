@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	width:  calc(100% - 30px);
+	border-radius: 15px;
+	border: 2px black solid;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: white;
+	color: black;
+}
+
+.btn {
+	width: calc(100% - 30px);
+	border-radius: 15px;
+	border: 2px black solid;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 18px;
+	margin-bottom: 24px;
+	text-align: center;
+	transition: .3s;
+	background-color: white;
+	color: black;
+}
+
+.btn:hover {
+	background-color: rgb(228, 228, 228);
+}
+
+.tb {
+	width: calc(100% - 30px);
+	background-color: #292929;
+	font-weight: 600;
+	font-size: 28px;
+	color: white;
+	padding-left: 30px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);;
+}
+
+.container {
+	width: calc(100vw - 60px);
+	padding: 30px;
+}
+
+
+/* Login page */
+
+#loginPage {
+	width: 100%;
+	text-align: center;
+}
+
+#loginPage .logo {
+	width: 80%;
+	max-width: 300px;
+	margin: 100px auto 50px;
+}
+
+#loginPage form {
+	width: 80vw;
+	margin: 0 auto;
+	max-width: 300px;
+}
+
+#loginPage form .password {
+	margin-bottom: 10px;
+}
+
+#loginPage form hr {
+	border: none;
+	color: black;
+	background-color: black;
+	margin: 7px auto 15px;
+	width: 70%;
+	height: 2px;
+}
+
+
+#loginPage .reg {
+	font-weight: 600;
+	text-decoration: underline;
+	color: black
+}
+
+.toolbar {
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+}
+
+
+/* Connect page */
+#connectPage .device {
+	width: calc(100% - 26px);
+	border: 2px black solid;
+	border-radius: 15px;
+	padding: 13px;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+#connectPage .device .data {
+	display: inline-block;
+	width: 70%;
+}
+
+#connectPage .device .data .name {
+	font-size: 24px;
+	color: black;
+	font-weight: 600;
+}
+
+#connectPage .device .data .id {
+	margin-top: 14px;
+	font-size: 14px;
+}
+
+#connectPage .device .paired {
+	width: 20%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	top: -15px;
+}
+
+/* Game page */
+
+#gamePage {
+    background-color: white;
+    width: 100%;
+    padding: 10px 0;
+}
+
+#gamePage .card {
+	margin: 15px auto;
+	padding: 10px 5px;
+}
+
+#gamePage .count {
+	color: #FF4D00;
+	font-size: 96px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#gamePage .balls {
+	font-size: 36px;
+	color: #16B7A3;
+	font-weight: bold;
+	text-align: center;
+}
+
+#gamePage .connect {
+	margin: 50px auto;
+	background-color: #3C91D0;
+	color: white;
+	width: 50%;
+}
+
+#gamePage .start-game {
+	margin: 50px auto;
+	background-color: #3BB927;
+	color: white;
+	width: 50%;
+}
+
+#gamePage .disconnect {
+	margin: 50px auto;
+	background-color: #b93127;
+	color: white;
+	width: 50%;
+}

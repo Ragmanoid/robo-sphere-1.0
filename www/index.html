@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; media-src *; img-src * data:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<title>RoboСфера 1.0</title>
+	<link rel="stylesheet" href="./css/onsenui.css">
+	<link rel="stylesheet" href="./css/onsen-css-components.min.css">
+	<script src="./js/onsenui.min.js"></script>
+	<script src="./js/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+<ons-navigator swipeable id="navigator" page="login"></ons-navigator>
+
+<template id="homeBar">
+	<ons-page id="homeBar">
+		<ons-tabbar swipeable position="bottom" id="tabBar">
+			<ons-tab page="home" label="Рейтинг" icon="fa-medal" active></ons-tab>
+			<ons-tab page="game" label="Игра" icon="fa-basketball-ball"></ons-tab>
+			<ons-tab page="connect" label="Подключение" icon="md-bluetooth"></ons-tab>
+		</ons-tabbar>
+	</ons-page>
+</template>
+
+<template id="login">
+	<ons-page id="loginPage">
+		<img src="./img/logoDark.png" class='logo' />
+		<form>
+			<input id="loginInput" name="login" placeholder='Логин'>
+			<input id="passwordInput" name="password" placeholder='Пароль' type='password' class='password'>
+			<hr />
+			<div class='btn' id="btnAuth">Войти</div>
+		</form>
+		<a to='/reg' class='reg'>
+			Нет акаунта?
+		</a>
+	</ons-page>
+</template>
+
+<template id="home">
+	<ons-page id="homePage">
+		<ons-toolbar style="background: #B6AA43">
+			<div class="center toolbar">Рейтинг</div>
+		</ons-toolbar>
+		<div class="container">
+			<ons-list id="listRating"></ons-list>
+			<br><br>
+			<div class="btn" id="reloadToplistBtn">Обновить</div>
+		</div>
+	</ons-page>
+</template>
+
+<template id="game">
+	<ons-page id="gamePage">
+		<ons-toolbar style="background: #3BB927">
+			<div class="center toolbar">Игра</div>
+		</ons-toolbar>
+		<div class="container card">
+			<div class="count" id="count"></div>
+			<div class="balls">попаданий</div>
+			<div id="gameContorller">
+				<div class="btn start-game" id="startGame">Начать игру</div>
+				<div class="btn disconnect" id="disconnect">Отключиться</div>
+			</div>
+			<div class="btn connect" id="connectBtnGame">Подключиться</div>
+		</div>
+	</ons-page>
+</template>
+
+<template id="connect">
+	<ons-page id="connectPage">
+		<ons-toolbar style="background: #3C91D0">
+			<div class="center toolbar">Подключение</div>
+			<div class="right">
+				<ons-toolbar-button id="logoutBtn"><ons-icon icon="fa-sign-out-alt" style="color: white"></ons-icon></ons-toolbar-button>
+			</div>
+		</ons-toolbar>
+		<div class="container" id="btDevices">
+		</div>
+	</ons-page>
+</template>
+
+<ons-modal direction="up">
+	<div style="text-align: center">
+	  <p>
+		<ons-icon icon="md-spinner" size="34px" spin></ons-icon> Загрузка...
+	  </p>
+	</div>
+  </ons-modal>
+
+<script type="text/javascript" src="./cordova.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
+
+<script>
+
+const connect = id => {
+	bt.connect(id);
+}
+
+</script>
